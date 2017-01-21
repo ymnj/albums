@@ -23,14 +23,13 @@ class AlbumList extends Component {
 
 	renderAlbums() {
 		return this.state.albums.map((album) => {
-			return <Text key={album.title}>{album.title}</Text>
+			return <AlbumListItem key={album.title} album={album} />;
 		});
 	}
 
 	render() {
 		return (
 			<View>
-				<Text>Album List</Text>
 				{this.renderAlbums()}
 			</View>
 		);
